@@ -1,0 +1,97 @@
+@import "../../styles/abstract/variables";
+@import "../../styles/mixins/media";
+
+.Post {
+  &-Header {
+    background: $primary;
+    color: $white;
+    padding: 24px;
+    border-radius: 16px 16px 0 0;
+    position: relative;
+    z-index: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mobile {
+      padding: 15px;
+    }
+
+    h2 {
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 26px;
+
+      @include mobile {
+        font-size: 18px;
+      }
+    }
+
+    &Btns {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      @include mobile {
+        gap: 10px;
+      }
+
+      button {
+        all: unset;
+        width: 20px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+
+        @include mobile {
+          transform: scale(0.7);
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+
+  &-Body {
+    border: 1px solid $grey;
+    border-radius: 0 0 16px 16px;
+    margin-top: -1px;
+    padding: 24px 24.96px;
+
+    @include mobile {
+      padding: 15px;
+    }
+  }
+
+  &-NameAndTime {
+    display: flex;
+    justify-content: space-between;
+    color: $lightGrey;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    gap: 20px;
+
+    @include mobile {
+      font-size: 13px;
+    }
+
+    p:first-child {
+      font-weight: 700;
+    }
+  }
+
+  &-Content {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: $black;
+    margin-top: 16px;
+    line-break: anywhere;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+}

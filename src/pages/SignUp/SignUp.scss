@@ -1,0 +1,33 @@
+@import "../../styles/abstract/variables";
+@import "../../styles/mixins/media";
+
+.SignUp {
+  height: 100%;
+  display: grid;
+  place-items: center;
+
+  &-Card {
+    border: 1px solid $placeholder;
+    border-radius: 16px;
+    width: 500px;
+    padding: 24px;
+
+    @include mobile {
+      width: 90%;
+    }
+  }
+
+  &-Heading {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    margin-bottom: 24px;
+  }
+
+  &-Form {
+    .Button {
+      float: right;
+      margin-top: 16px;
+    }
+  }
+}

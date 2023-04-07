@@ -1,0 +1,38 @@
+@import "../../styles/abstract/variables";
+
+.NewPost {
+  border: 1px solid $lightGrey;
+  border-radius: 16px;
+  padding: 24px;
+
+  &-EditType {
+    border: none;
+    padding: 0px;
+    border-radius: 0px;
+
+    &Btns {
+      display: flex;
+      justify-content: flex-end;
+      gap: 16px;
+    }
+  }
+
+  &-Heading {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: $black;
+    margin-bottom: 24px;
+  }
+
+  &-Form {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+
+    .Button {
+      width: fit-content;
+      align-self: end;
+    }
+  }
+}

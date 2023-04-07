@@ -1,0 +1,22 @@
+@import "../../styles/abstract/variables";
+@import "../../styles/mixins/media";
+
+.DeleteModalContent {
+  &-Text {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: $black;
+    margin-bottom: 40px;
+
+    @include mobile {
+      font-size: 18px;
+    }
+  }
+
+  &-Btns {
+    display: flex;
+    justify-content: flex-end;
+    gap: 16px;
+  }
+}

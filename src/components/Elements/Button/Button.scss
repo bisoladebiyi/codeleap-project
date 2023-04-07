@@ -1,0 +1,22 @@
+@import "../../../styles/abstract/variables";
+
+.Button {
+  all: unset;
+  color: $white;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 6.8px 31px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}

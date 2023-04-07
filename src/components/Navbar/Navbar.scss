@@ -1,0 +1,53 @@
+@import "../../styles/abstract/variables";
+@import "../../styles/mixins/media";
+
+.Navbar {
+  background: $primary;
+  padding: 27px 0px;
+
+  &-Wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 800px;
+    margin: 0 auto;
+    padding: 0 37px;
+
+    @include mobile {
+      width: auto;
+    }
+  }
+
+  h1 {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    color: $white;
+    width: 800px;
+  }
+
+  button {
+    all: unset;
+    color: $white;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    white-space: nowrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0px;
+      height: 2px;
+      border-radius: 3px;
+      background: $white;
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
