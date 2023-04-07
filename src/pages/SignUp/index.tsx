@@ -5,6 +5,7 @@ import Button from "../../components/Elements/Button";
 import Field from "../../components/Elements/Field";
 import { updateUserInfo } from "../../redux/features/userInfoSlice";
 import { colors } from "../../utils/constants/colors";
+import { routes } from "../../utils/constants/routes";
 import "./SignUp.scss";
 
 const SignUp = () => {
@@ -16,7 +17,7 @@ const SignUp = () => {
 
   useEffect(() => {
     if (username) {
-      navigate("/");
+      navigate(routes.HOME);
     }
   }, [username]);
 
@@ -30,7 +31,7 @@ const SignUp = () => {
     e.preventDefault();
 
     dispatch(updateUserInfo({ username: value }));
-    navigate("/");
+    navigate(routes.HOME);
   };
 
   return (

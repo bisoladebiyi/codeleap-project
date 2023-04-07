@@ -26,3 +26,7 @@ In the project directory, you can run:
 #### Build App
 
 `npm run build`
+
+## Things Left To Do
+
+* Write tests
