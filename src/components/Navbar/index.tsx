@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { updateUserInfo } from "../../redux/features/userInfoSlice";
+import { routes } from "../../utils/constants/routes";
 import "./Navbar.scss";
 
 const Navbar = () => {
@@ -10,7 +11,7 @@ const Navbar = () => {
 
   const logOut = () => {
     dispatch(updateUserInfo({ username: "" }));
-    navigate("/sign-up");
+    navigate(routes.SIGNUP);
   };
   return (
     <nav className="Navbar">
